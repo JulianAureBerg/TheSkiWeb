@@ -1,0 +1,203 @@
+/********************Global*********************/
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/*********************Navigation menu, mobile responsive************************/
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    position: relative;
+    background: black;
+    opacity: 0.7;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+li {
+    list-style: none;
+}
+li a {
+    padding: 10px;
+    text-decoration: none;
+}
+
+a {
+    color: white;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.hamburger {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.line-top,
+.line-center,
+.line-bottom {
+    width: 50px;
+    height: 5px;
+    margin: 6px;
+    background-color: #fff;
+    border-radius: 20px;
+    transform-origin: center;
+    transition: all ease-in-out 0.2s;
+}
+.line1 {
+    transform: rotate(45deg) translate(14px);
+}
+.line2 {
+    display: none;
+}
+.line3 {
+    transform: rotate(-45deg) translate(11px);
+}
+main {
+    min-height: 100vh;
+}
+.video-wrapper {
+    /* Telling our absolute positioned video to 
+    be relative to this element */
+    position: relative;
+  
+    width: 100%;
+    height: 100vh;
+  
+    /* Will not allow the video to overflow the 
+    container */
+    overflow: hidden;
+  
+    /* Centering the container's content vertically 
+    and horizontally */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  video {
+    /** Simulationg background-size: cover */
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+/***************************Background landing page**************/
+
+/* .hero {
+    min-height: 100vh;
+    background-image: url("./images/freeski.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+} */
+
+/*****************************Footer******************************/
+footer {
+    font-size: 8px;
+    color: rgb(100, 95, 95);
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    flex-direction: column;
+    width: 100%;
+}
+footer a {
+    color: white;
+    font-size: 20px;
+}
+
+/********************Main**************************/
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*********************Contact**********************/
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+form input {
+    padding: 20px;
+    border: none;
+    background-color: #f3ebeb;
+    text-align: center;
+    cursor: pointer;
+    font-family: inherit;
+}
+.btn-primary {
+    padding: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(21, 11, 76);
+    color: white;
+    font-family: inherit;
+}
+
+/*************************Media queries***************************/
+
+@media(max-width: 768px) {
+    ul {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #000;
+        line-height: 50px;
+        width: 70%;
+        transition: all ease-in-out 0.3s;
+        transform:translate(0, -1800px);
+    }
+    .hamburger {
+        display: flex;
+    }
+    nav {
+        background-color: #000;
+        opacity: 0.9;
+    }
+   
+    .show-menu {
+        transform: translate(0);
+    }
+    a {
+        color: white;
+    }
+    .logo {
+        color: white;
+    }
+}
